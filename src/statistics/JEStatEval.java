@@ -114,7 +114,7 @@ public abstract class JEStatEval extends JEmula {
 		if (!file.exists()) {
 			// directory does not exist
 			try {
-				this.message("creating new directory " + this.thePath2File, 100);
+				this.message("creating new folder \"" + this.thePath2File + "\"", 100);
 				file.mkdirs();
 			} catch (Exception e) {
 				this.error("could not create the result directory " + this.thePath2File);

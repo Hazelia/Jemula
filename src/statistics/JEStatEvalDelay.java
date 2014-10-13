@@ -125,12 +125,12 @@ public class JEStatEvalDelay extends JEStatEval {
 
 		this.theEvalList1.addElement(anEvalTime_ms);
 
-		if (this.theSampleList1.size() > 0) {
-			this.theEvalList2.addElement(this.theSampleList1.get(this.theSampleList1.size() - 1));
-		} else {
-			this.theEvalList2.addElement(Double.NaN);
-		}
-
+//		if (this.theSampleList1.size() > 0) {
+//			this.theEvalList2.addElement(this.theSampleList1.get(this.theSampleList1.size() - 1));
+//		} else {
+//			this.theEvalList2.addElement(Double.NaN);
+//		}
+//
 		this.theEvalList3.addElement(aNumOfSamples);
 		this.theEvalList4.addElement(this.theSum1);
 		this.theEvalList5.addElement(anAverage3);
@@ -152,8 +152,8 @@ public class JEStatEvalDelay extends JEStatEval {
 
 			try {
 			this.theOutWriter = new PrintWriter(new FileWriter(this.theFullFileName, true));
-			this.theOutWriter.print(this.theEvalList1.elementAt(this.theEvalList1.size() - 1).toString() + "\t"
-					+ this.theEvalList2.elementAt(this.theEvalList2.size() - 1).toString() + "\t"
+			this.theOutWriter.print(this.theEvalList1.elementAt(this.theEvalList1.size() - 1).toString() + "\t\t"
+//					+ this.theEvalList2.elementAt(this.theEvalList2.size() - 1).toString() + "\t"
 					+ this.theEvalList3.elementAt(this.theEvalList3.size() - 1).toString() + "\t"
 					+ this.theEvalList4.elementAt(this.theEvalList4.size() - 1).toString() + "\t"
 					+ this.theEvalList5.elementAt(this.theEvalList5.size() - 1).toString() + "\t"
